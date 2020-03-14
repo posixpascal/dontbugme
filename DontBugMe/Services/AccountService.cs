@@ -5,17 +5,17 @@ using System.Threading.Tasks;
 
 namespace DontBugMe
 {
-    public class AccountService : IDataStore<Account>
+    public class AccountService
     {
-        List<Account> accounts;
+        readonly List<Account> accounts;
 
         public AccountService()
         {
             accounts = new List<Account>();
             var _accounts = new List<Account>
             {
-                new Account { Id = Guid.NewGuid().ToString(), EmailAddress = "pascal@raszyk.de", Password="test1234"},
-                new Account { Id = Guid.NewGuid().ToString(), EmailAddress = "j.löhr@live.de", Password="test1234"},
+                new Account { Id = 1, EmailAddress = "pascal@raszyk.de", Password="test1234"},
+                new Account { Id = 2, EmailAddress = "j.löhr@live.de", Password="test1234"},
             };
         }
 

@@ -5,10 +5,10 @@ namespace DontBugMe
 {
     public interface IDataStore<T>
     {
-        Task<bool> AddItemAsync(T item);
-        Task<bool> UpdateItemAsync(T item);
-        Task<bool> DeleteItemAsync(string id);
-        Task<T> GetItemAsync(string id);
-        Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
+        Task<bool> AddAsync(T account);
+        Task<bool> UpdateAsync(T account);
+        Task<bool> DeleteAsync(string id);
+        Task<T> GetAsync(string id);
+        Task<IEnumerable<T>> GetAsync(bool forceRefresh = false);
     }
 }
